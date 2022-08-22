@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: url("images/bg-intro-mobile.png") rgba(255, 120, 120, 0.8);
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* ==========
+ TYPOGRAPHY
+ ========== */
+h1 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: -0.291667px;
+  color: #ffffff;
+  height: 80px;
+}
+
+p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #ffffff;
+  margin-bottom: 64px;
+}
+
+span.trial-info {
+  display: block;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 26px;
+  letter-spacing: 0.267857px;
+  color: #fff;
+  padding: 17px 66px;
+  background: linear-gradient(-45deg, #5e54a4, #e73c7e, #5e54a4, #e73c7e);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+  border-radius: 10px;
+  margin-bottom: 24px;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+small {
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 21px;
+  color: #bab7d4;
+  padding: 0 15px;
+}
+
+.link-small {
+  text-decoration: none;
+  color: #ff7979;
+}
+
+/* ==========
+ LAYOUT
+ ========== */
+.flex-container {
+  width: 87.5%;
+  max-width: 327px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 88px 0 0 0;
+}
+
+.form-container {
+  width: 100%;
+  padding-bottom: 64px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  background: #fff;
+  box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+  border-radius: 10px;
+  /* margin-bottom: 64px; */
+}
+
+input {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 26px;
+  letter-spacing: 0.25px;
+  width: 100%;
+  color: #3d3b48;
+  background: #fff;
+  padding: 15px 0 15px 19.41px;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  margin-bottom: 16px;
+}
+
+input::placeholder {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 26px;
+  letter-spacing: 0.25px;
+  color: #3d3b48;
+  mix-blend-mode: normal;
+  opacity: 0.75;
+}
+
+.error::placeholder {
+  color: #ff7979;
+}
+
+input:focus {
+  outline: unset;
+}
+
+.input-container {
+  width: 100%;
+  position: relative;
+}
+
+#fname-icon-error {
+  position: absolute;
+  display: none;
+  top: 19px;
+  right: 5%;
+}
+
+#lname-icon-error {
+  position: absolute;
+  display: none;
+  top: 17px;
+  right: 5%;
+}
+
+#email-icon-error {
+  position: absolute;
+  display: none;
+  top: 17px;
+  right: 5%;
+}
+
+#password-icon-error {
+  position: absolute;
+  display: none;
+  top: 17px;
+  right: 5%;
+}
+
+label {
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 16px;
+  text-align: right;
+  color: #ff7979;
+}
+
+#fname-label {
+  display: none;
+}
+#lname-label {
+  display: none;
+}
+#email-label {
+  display: none;
+}
+#password-label {
+  display: none;
+}
+
+button {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #fff;
+  background: #38cc8b;
+  padding: 15px 0;
+  box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.0908818);
+  border: unset;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+@media (min-width: 992px) {
+  html {
+    background: url("images/bg-intro-desktop.png") rgba(255, 120, 120, 0.8);
+  }
+
+  /* ==========
+       TYPOGRAPHY
+       ========== */
+  h1 {
+    font-size: 50px;
+    line-height: 55px;
+    letter-spacing: -0.520833px;
+    height: 131px;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  small {
+    padding: 0 45.5px;
+  }
+
+  /* ==========
+       LAYOUT
+       ========== */
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 77.083%;
+    max-width: 1110px;
+    padding: 121px 0 0 0;
+    margin-bottom: 120px;
+  }
+
+  main {
+    width: 47.297%;
+    text-align: left;
+  }
+
+  .form-container {
+    padding-bottom: 0;
+    width: 48.6486%;
+  }
+
+  form {
+    padding: 40px;
+  }
+}
