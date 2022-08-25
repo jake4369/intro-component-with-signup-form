@@ -38,6 +38,14 @@ function success(input, label, icon) {
   icon.style.display = "none";
 }
 
+function resetField(input, label, icon) {
+  input.style.border = "1px solid #dedede";
+  input.classList.remove("error");
+  label.style.display = "none";
+  input.style.marginBottom = "16px";
+  icon.style.display = "none";
+}
+
 function checkFirstName() {
   const firstName = fNameInput.value;
   if (firstName.length < 2 || firstName === "") {
@@ -100,6 +108,22 @@ submitBtn.addEventListener("click", (e) => {
   if (!fNameValid || !lNameValid || !emailValid || !passwordValid) {
     e.preventDefault();
   }
+});
+
+fNameInput.addEventListener("input", () => {
+  resetField(fNameInput, fNameLabel, fNameErrorIcon);
+});
+
+lNameInput.addEventListener("input", () => {
+  resetField(lNameInput, lNameLabel, lNameErrorIcon);
+});
+
+emailInput.addEventListener("input", () => {
+  resetField(emailInput, emailLabel, emailErrorIcon);
+});
+
+passwordInput.addEventListener("input", () => {
+  resetField(passwordInput, passwordLabel, passwordErrorIcon);
 });
 
 // TYPEWRITER
